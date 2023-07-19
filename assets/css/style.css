@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 5fr;
+  grid-template-rows: auto 4fr auto;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  gap: 10px;
+}
+
+.inicio {
+  background-image: url(../img/imagen2.png);
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 30px;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+  padding-left: 500px;
+  padding-right: 30px;
+  animation-name: imagen;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes imagen {
+  0% {
+    width: 0%;
+  }
+
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.inicio:hover {
+  cursor: pointer;
+}
+
+.inicio strong {
+  border: 3px solid black;
+}
+
+.aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-left: 5%;
+  background-image: linear-gradient(white, #29292a);
+  width: 14vw;
+}
+
+.aside ul {
+  list-style: none;
+}
+
+.aside li {
+  padding: 10px 0px;
+}
+
+.aside a {
+  text-decoration: none;
+  color: black;
+  font-size: 26px;
+}
+
+.aside a:hover {
+  cursor: pointer;
+  font-size: 35px;
+  color: rgba(255, 17, 0, 0.659);
+}
+
+.main {
+  grid-area: main;
+  background-image: linear-gradient(rgba(253, 253, 253, 0.746), #29292a4a),
+    url(../img/innovacion-tecnologica.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 82vh;
+  color: white;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.mivis h2 {
+  font-size: 50px;
+  background-color: rgba(0, 0, 255, 0.581);
+  margin-bottom: 30px;
+}
+.mivi {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 150px;
+  padding-right: 150px;
+  gap: 50px;
+}
+
+.article {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.54);
+  padding: 30px 30px;
+  gap: 20px;
+}
+
+.cards h2 {
+  font-size: 50px;
+  background-color: rgba(0, 0, 255, 0.589);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.proyectos {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  gap: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+.card button {
+  background-color: rgb(18, 84, 164);
+  color: white;
+  height: 4vh;
+  width: 40%;
+  border-radius: 1em;
+  margin: 15px;
+  transition: all 0, 5s ease;
+}
+
+.card button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: lightblue;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #29292a;
+  color: white;
+}
+
+.logo-footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+
+.footer i {
+  padding: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "aside aside"
+      "main main"
+      "footer footer";
+  }
+
+  .inicio {
+    padding-left: 30px;
+  }
+
+  @keyframes imagen {
+    0% {
+      width: 0%;
+    }
+
+    25% {
+      width: 25%;
+    }
+    50% {
+      width: 50%;
+    }
+    75% {
+      width: 75%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .aside {
+    width: 100vw;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .aside ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: linear-gradient(white, #29292a);
+    justify-content: center;
+  }
+
+  .aside li {
+    padding: 10px 10px;
+  }
+
+  .mivi {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .main {
+    height: 75vh;
+  }
+  .article {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.54);
+    gap: 20px;
+  }
+  .article img {
+    width: 450px;
+  }
+
+  .proyectos {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    gap: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+  }
+  .card img {
+    width: 450px;
+  }
+}
